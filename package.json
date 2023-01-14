@@ -1,0 +1,30 @@
+{
+  "name": "caps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hub.js",
+  "scripts": {
+    "lint": "prettier --check src/ && eslint src/",
+    "test": "jest",
+    "start": "node hub.js",
+    "edit": "prettier --write src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethan-luxton/CAPS.git"
+  },
+  "author": "Ethan Luxton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ethan-luxton/CAPS/issues"
+  },
+  "homepage": "https://github.com/ethan-luxton/CAPS#readme",
+  "dependencies": {
+    "@types/jest": "^29.2.5",
+    "@types/node": "^18.11.18",
+    "chance": "^1.1.9",
+    "eslint": "^8.31.0",
+    "jest": "^29.3.1",
+    "prettier": "^2.8.3"
+  }
+}

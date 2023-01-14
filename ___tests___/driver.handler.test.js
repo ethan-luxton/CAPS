@@ -1,4 +1,4 @@
-const { events, EVENT_NAMES } = require("../events");
+const { events, EVENT_NAMES } = require("../src/events");
 const {
   toTest: { deliver, handlePickup },
 } = require("../src/driver/handler");

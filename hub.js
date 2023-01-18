@@ -1,5 +1,5 @@
-const { startDriver } = require("./driver/handler");
-const { startVendor } = require("./vendor/handler");
+const { startDriver } = require("./src/driver/handler");
+const { startVendor } = require("./src/vendor/handler");
 
 startDriver();
 startVendor();

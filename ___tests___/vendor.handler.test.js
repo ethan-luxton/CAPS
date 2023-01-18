@@ -20,7 +20,10 @@ describe('Testing handler for vendor', () => {
         sendPickup();
 
         // Assert
-        expect(emitMock).toHaveBeenCalledWith(EVENT_NAMES.pickup, expect.any(Object));
+        expect(emitMock).toHaveBeenCalledWith(EVENT_NAMES.pickup, expect.objectContaining({
+            store: expect.stringContaining(""),
+            orderId: expect.stringMatching(/[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}/i)
+        }));
     });
 
     test("Testing of vendor acknowledging delivery", () => {

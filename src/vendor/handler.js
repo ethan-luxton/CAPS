@@ -1,6 +1,5 @@
 const { chance, EVENT_NAMES } = require('../utils');
 const { io } = require('socket.io-client');
-
 const events = io('ws://localhost:3333');
 
 function sendPickup() {
@@ -21,12 +20,13 @@ function acknowledgeDelivery(orderId) {
 function startVendor() {
   events.on(EVENT_NAMES.delivered, acknowledgeDelivery);
   console.log('Vendor ready!');
-
+  
   // Copy this pattern
   function ready() {
+    
     sendPickup();
 
-    setTimeout(ready, chance.integer({ min: 750, max: 2000 }));
+    setTimeout(ready, chance.integer({ min: 2500, max: 3000 }));
   }
   ready();
   // The pattern

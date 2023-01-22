@@ -3,7 +3,7 @@ const io = require("socket.io-client");
 io.mockImplementation(() => {
     return {
         on: jest.fn(),
-        emit: jest.fn(),
+        emit: jest.fn()
     }
 });
 
@@ -14,6 +14,7 @@ const {
 
 jest.useFakeTimers();
 
+
 test("Driver deliver", () => {
   // Arrange
   
@@ -23,6 +24,7 @@ test("Driver deliver", () => {
 
   // Assert
   expect(events.emit).toHaveBeenCalledWith(EVENT_NAMES.delivered, "1234");
+
 });
 
 test("Driver handlePickup", () => {
@@ -42,4 +44,7 @@ test("Driver handlePickup", () => {
 
   // Assert
   expect(events.emit).toHaveBeenCalledWith(EVENT_NAMES.delivered, "1234");
+  
+  
 });
+
